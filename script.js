@@ -1,23 +1,19 @@
-
 function botao(){
-    let paraConverter = document.querySelector(".to-Convert");
-    let convertida = document.querySelector(".convert");
-    let inputValue = document.querySelector(".input-value").value;
-    
-    const dollar = 5.2;
+        const toConvert = document.querySelector(".currency-selector-to-convert")
+        const convert = document.querySelector(".currency-selector-convert")
+        const inputValue = document.querySelector(".input-value").value
 
-    const conversao = new Intl.NumberFormat("en-US",/*linguagem/País */ {
-        style: "currency",/*Tipo,no caso, moeda */
-        currency: "USD",/*Sigla dp país */
-    }).format(inputValue / dollar);/*O que formatar */
+        const paraConverte = document.querySelector(".to-Convert")
+        const valorConvertido = document.querySelector(".convert")
 
-    paraConverter.innerHTML = new Intl.NumberFormat("pt-Br", {
-        style: "currency",
-        currency: "BRL",
-    }).format(inputValue);
-    
-    convertida.innerHTML = (conversao);
-    
+        const dolarToday = 5.2
 
-    
+        const jaConverted = inputValue / dolarToday
+
+        paraConverte.innerHTML = inputValue
+        valorConvertido.innerHTML = jaConverted
+        
+
+        
+        
 }
