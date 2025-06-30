@@ -1,62 +1,90 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor-DevClub</title>
-    <link rel="stylesheet" href="style.css">
+<!DOCTYPE html> <!--tipo de documento-->
+<html lang="pt-br"> <!--define o idioma da página como português do Brasil-->
+
+<head> <!--cabeçalho da página onde ficam as configurações não visiveis ao usuário-->
+
+    <meta charset="UTF-8"> <!--define a codificação de caracteres como UTF-8 para o navegador reconhecer os caracteries do Brasil, (acentuação)-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--define a largura da página como a largura do dispositivo e o zoom inicial como 1.0,(ou seja sem zoom, apenas 100% de visão)-->
+
+    <title>Conversor-DevClub</title> <!--define o título da página que aparece na aba do navegador-->
+
+    <link rel="stylesheet" href="style.css"> <!--linka o arquivo CSS externo para estilizar a página-->
+
 </head>
-<body>
-    <img class="logo" src="section/logo.gif" alt="logo-covert">
-    <main>
-        <div>
-            <div class="box-converter">
-                <p>Converter <b>de:</b></p>
-                <select class="currency-selector-to-convert">
-                    <option value="real">R$ Real Brasileiro</option>
-                    <option value="dollar">US$ Dóllar Americano</option>
-                    <option value="euro">€ Euro</option>
-                    <option value="libra">£ Libra</option>
-                    <option value="bitcoin">₿ Bitcoin</option>
+<body> <!--corpo da página onde ficam os elementos visiveis ao usuário-->
+
+    <img class="logo" src="section/logo.gif" alt="logo-covert"> <!--imagem do logo do conversor, com a classe logo para estilização-->
+
+    <main> <!--principal da página onde ficam os elementos principais-->
+
+        <div> <!--divisão para agrupar os elementos do conversor-->
+
+            <div class="box-converter"> <!--divisão para agrupar os elementos á serem convertidos-->
+
+                <p>Converter <b>de:</b></p> <!--parágrafo para indicar de qual moeda será feita a conversão, com o texto em negrito-->
+
+                <select class="currency-selector-to-convert"> <!--seletor de moeda para escolher a moeda de origem da conversão-->
+
+                    <option value="real">R$ Real Brasileiro</option> <!--opção de moeda real brasileiro-->
+
                 </select>
             </div>
-            <div class="box-converter">
-                <p>Coverter <b>para:</b></p>
-                <select class="currency-selector-convert">
-                    <option value="dollar">US$ Dóllar Americano</option>
-                    <option value="euro">€ euro</option>
-                    <option value="libra">£ libra</option>
-                    <option value="bitcoin">₿ bitcoin</option>
+            <div class="box-converter">   <!--divisão para agrupar os elementos da conversão-->
+
+                <p>Coverter <b>para:</b></p> <!--parágrafo para indicar para qual moeda será feita a conversão, com o texto em negrito-->
+
+                <select onchange="mudarImg()" class="currency-selector-convert"> <!--seletor de moeda para escolher a moeda de destino da conversão-->
+
+                    <option value="dollar">US$ Dóllar Americano</option> <!--opção de moeda dólar americano-->
+
+                    <option value="euro">€ euro</option> <!--opção de moeda euro-->
+
+                    <option value="libra">£ libra</option> <!--opção de moeda libra-->
+
+                    <option value="bitcoin">₿ bitcoin</option> <!--opção de moeda bitcoin-->
+
                 </select>
-            </div>
-            <div class="input">
-            <p class="value">valor:</p>
-            <input class="input-value" type="number" placeholder="10.000,00">
+            </div> 
+            <div class="input"> <!--divisão para agrupar os elementos de entrada de dados-->
+
+            <p class="value">valor:</p> <!--parágrafo para indicar o valor a ser convertido-->
+
+            <input class="input-value" type="number" placeholder="10.000,00"> <!--campo de entrada de número para o usuário digitar o valor a ser convertido, com um placeholder indicando o formato do valor-->
+
             </div>
 
-            <button onclick="botao()">Converte</button>
+            <button onclick="botao()">Converte</button> <!--botão para realizar a conversão, com uma função onclick que chama a função botao() definida no arquivo script.js-->
 
         </div>
 
-        <div class="moeda-converte">
+        <div class="moeda-converte"> <!--divisão para agrupar os elementos da moeda convertida-->
             
-                <div class="moeda-convertida">
-                     <img src="section/real.png" alt="logo-real">
-                     <p>Real</p>
-                     <p class="valores to-Convert">R$ 0,00</p>
-                </div>
-                     <img src="section/Vector.png" alt="">
+                <div class="moeda-a-convertida"> <!--divisão para agrupar os elementos da moeda a ser convertida-->
 
-                <div class="moeda-convertida">
-                     <img src="section/dollar.png" alt="">
-                     <p>US$ Dóllar</p>
-                     <p class= "valores convert">US$ 0,00</p>
+                     <img src="section/real.png" alt="logo-real"> <!--imagem do logo da moeda real, com o texto alternativo "logo-real"-->
+
+                     <p>Real</p> <!--parágrafo para indicar a moeda de origem da conversão-->
+
+                     <p class="valores to-Convert">R$ 0,00</p> <!--parágrafo para indicar o valor da moeda de origem da conversão, com a classe valores to-Convert para estilização-->
+
+                </div>
+                     <img src="section/Vector.png" alt="moeda-para-converter"> <!--imagem do vetor que indica a conversão, com o texto alternativo "moeda-para-converter"-->
+
+                <div class="moeda-convertida"> <!--divisão para agrupar os elementos da moeda convertida-->
+
+                     <img src="section/dollar.png" alt="moeda-convertida"> <!--imagem do logo da moeda convertida, com o texto alternativo "moeda-convertida"-->
+
+                     <p class="moeda-nome">US$ Dóllar</p> <!--parágrafo para indicar a moeda convertida-->
+
+                     <p class= "valores convert">US$ 0,00</p> <!--parágrafo para indicar o valor da moeda convertida, com a classe valores convert para estilização-->
+
                 </div>
             
         </div>
 
     </main>
-    <script src="script.js"></script>            
-<!--Oi -->
+    <script src="script.js"></script> <!--linka o arquivo JavaScript externo para adicionar interatividade à página-->           
+
 </body>
 </html>

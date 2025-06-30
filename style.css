@@ -1,114 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');    /* importa a fonte Roboto do Google Fonts */
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    padding: 0; /* remove padding */
+    margin: 0; /* remove margin */
+    box-sizing: border-box; /* define o box-sizing para border-box */
 }
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #8A51FC;
+    display: flex; /* define o display como flex */
+    flex-direction: column; /* define a direção do flex como coluna */
+    align-items: center; /* alinha os itens ao centro */
+    background-color: #8A51FC; /* define a cor de fundo como roxo */
 }
 .logo{
-    display: block;
-    width: 300px;
-    margin: 20px auto;
+    display: block; /* define o display como block */
+    width: 300px; /* define a largura como 300px */
+    margin: 20px auto; /* define a margem como 20px auto */
 }
 main{
-    display: inline-block;
-    width: 375px;
-    background-color: white;
-    border-radius: 20px;
-    margin: 20px auto 30px;
-    padding: 50px 24px 30px;
+    display: inline-block; /* define o display como inline-block */
+    width: 375px; /* define a largura como 375px */
+    background-color: white; /* define a cor de fundo como branco */
+    border-radius: 20px; /* define o raio da borda como 20px */
+    margin: 20px auto 30px; /* define a margem como 20px auto 30px */
+    padding: 50px 24px 30px; /* define o padding como 50px 24px 30px */
 }
 .box-converter{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 5px;
-    margin-top: 10px;
+    display: flex; /* define o display como flex */
+    flex-direction: column; /* define a direção do flex como coluna */
+    width: 100%; /* define a largura como 100% */
+    gap: 5px; /* define o gap como 5px */
+    margin-top: 10px; /* define a margem superior como 10px */
     
 }
 select{
-    height: 30px;
-    font-size: 17px;
-    padding-left: 10px;
-    outline: none;
-    font-weight: 600;
-    border-radius: 7px;
+    height: 30px; /* define a altura como 30px */
+    font-size: 17px; /* define o tamanho da fonte como 17px */
+    padding-left: 10px; /* define o padding esquerdo como 10px */
+    outline: none; /* remove o outline */
+    font-weight: 600; /* define o peso da fonte como 600 */
+    border-radius: 7px; /* define o raio da borda como 7px */
 }
 .input{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: 20px;
+    display: flex; /* define o display como flex */
+    flex-direction: column; /* define a direção do flex como coluna */
+    gap: 5px; /* define o gap como 5px */
+    margin-top: 20px; /* define a margem superior como 20px */
     
 }
-.input p{
-    font-size: 18px;
-    font-weight: 400;
+.input p{ /* define o estilo do parágrafo dentro da classe input */
+    font-size: 18px; /* define o tamanho da fonte como 18px */
+    font-weight: 400; /* define o peso da fonte como 400 */
 }
 input{
-    width: 100%;
-    height: 30px;
-    cursor: pointer;
-    font-size: 17px;
-    padding-left: 10px;
-    outline: none;
-    font-weight: 700;
+    width: 100%; /* define a largura como 100%, mas não cobrirá tudo por que o main tem padding*/
+    height: 30px; /* define a altura como 30px */
+    cursor: pointer; /* define o cursor como pointer */
+    font-size: 17px; /* define o tamanho da fonte como 17px */
+    padding-left: 10px; /* define o padding esquerdo como 10px */
+    outline: none; /* remove o outline */
+    font-weight: 700; /* define o peso da fonte como 700 */
     
 }
 button{
-    width: 100%;
-    height: 35px;
-    margin: 30px 0 20px;
-    background-color: #8A51FC;
-    color: white;
-    border-radius: 7px;
-    border: none;
-    font-size: 17px;
+    width: 100%; /* define a largura como 100% */
+    height: 35px; /* define a altura como 35px */
+    margin: 30px 0 20px; /* define a margem como 30px 0 20px */
+    background-color: #8A51FC; /* define a cor de fundo como roxo */
+    color: white; /* define a cor do texto como branco */
+    border-radius: 7px; /* define o raio da borda como 7px */
+    border: none; /* remove a borda */
+    font-size: 17px; /* define o tamanho da fonte como 17px */
 }
-button:hover{
-    opacity: 0.8;
-    cursor: pointer;
+button:hover{ /* define o efeito hover do botão, que quando o mouse passar por cima do botao */
+    opacity: 0.8; /* define a opacidade como 0.8 */
+    cursor: pointer; /* define o cursor como pointer, que é a mao de selecionar */
 }
-button:active{
-    opacity: 0.5;
+button:active{ /* define o efeito active do botão, que quando o mouse clicar no botao */
+    opacity: 0.5; /* define a opacidade como 0.5 */
 }
-.valores{
-    font-size: 20px;
-    font-weight: 600;
+.valores{ 
+    font-size: 20px; /* define o tamanho da fonte como 20px */
+    font-weight: 600; /* define o peso da fonte como 600 */
 }
 .moeda-converte{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    gap: 15px;
-    border: solid;
-    border-color: #936de0;
-    border-radius: 40px;
-    border-width: 1px;
+    display: flex; /* define o display como flex */
+    flex-direction: column; /* define a direção do flex como coluna */
+    align-items: center; /* alinha os itens ao centro */
+    padding: 20px; /* define o padding como 20px */
+    gap: 15px; /* define o gap como 15px */
+    border: solid; /* define a borda como sólida */
+    border-color: #936de0; /* define a cor da borda como roxo claro */
+    border-radius: 40px; /* define o raio da borda como 40px */
+    border-width: 1px; /* define a largura da borda como 1px */
 }
-.moeda-convertida{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.moeda-convertida, .moeda-a-convertida{
+    display: flex; /* define o display como flex */
+    flex-direction: column; /* define a direção do flex como coluna */
+    align-items: center; /* alinha os itens ao centro */
 }
 p{
-    font-family: roboto;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
+    font-family: roboto; /* define a fonte como Roboto */
+    font-size: 14px; /* define o tamanho da fonte como 14px */
+    font-weight: 400; /* define o peso da fonte como 400 */
+    line-height: 18px; /* define a altura da linha como 18px */
 }
 .box-converter p{
-    font-size: 16px;
-    opacity: 0.6;
+    font-size: 16px; /* define o tamanho da fonte como 16px */
+    opacity: 0.6; /* define a opacidade como 0.6 */
 }
 .value{
-    font-size: 16px;
-    opacity: 0.6;
+    font-size: 16px; /* define o tamanho da fonte como 16px */
+    opacity: 0.6; /* define a opacidade como 0.6 */
 }
-/* Media Querie */
+
